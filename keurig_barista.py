@@ -7,12 +7,12 @@ from PIL import Image
 k_small_logo = Image.open("keurig_small_logo.png")
 k_logo = Image.open("keurig_logo.png")
 
-st.set_page_config(page_title="Keurig Barista", page_icon=k_small_logo, initial_sidebar_state="auto")
-st.sidebar.image(k_logo)
-st.sidebar.title("Welcome To Keurig Virtual Personal Barista")
-st.sidebar.divider()
-st.sidebar.subheader("Let me help you find the perfect beverage!")
-#mood_option = st.sidebar.selectbox('How are you feeling today?',('Happy', 'Tired', 'Gloomy', 'Sick'))
+# st.set_page_config(page_title="Keurig Barista", page_icon=k_small_logo, initial_sidebar_state="auto")
+# st.sidebar.image(k_logo)
+# st.sidebar.title("Welcome To Keurig Virtual Personal Barista")
+# st.sidebar.divider()
+# st.sidebar.subheader("Let me help you find the perfect beverage!")
+# #mood_option = st.sidebar.selectbox('How are you feeling today?',('Happy', 'Tired', 'Gloomy', 'Sick'))
 
 openai.api_type = "azure"
 openai.api_base = "https://testaisvc.openai.azure.com/"
@@ -165,7 +165,7 @@ if "messages" not in st.session_state.keys():
 
 for message in st.session_state.messages:
     if message["role"] == "assistant":
-        with st.chat_message(message["role"], avatar=k_small_logo):
+        with st.chat_message(message["role"]): #, avatar=k_small_logo):
             st.write(message["content"])
     else:
         with st.chat_message(message["role"]):
@@ -196,7 +196,7 @@ if prompt:
     chat_response = completion.choices[0].message.content
 
     thinking_msg.empty()
-    with st.chat_message("Assistant", avatar=k_small_logo):
+    with st.chat_message("Assistant"): #, avatar=k_small_logo):
         st.write(chat_response)
 
     message = {"role": "assistant", "content": chat_response}

@@ -4,8 +4,8 @@ import os
 import openai
 from PIL import Image
 
-k_small_logo = Image.open("images/keurig_small_logo.png")
-k_logo = Image.open("images/keurig_logo.png")
+k_small_logo = Image.open("keurig_small_logo.png")
+k_logo = Image.open("keurig_logo.png")
 
 st.set_page_config(page_title="Keurig Barista", page_icon=k_small_logo, initial_sidebar_state="auto")
 st.sidebar.image(k_logo)

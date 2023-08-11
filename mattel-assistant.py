@@ -21,7 +21,16 @@ openai.api_key = "1164d7a0490a41b9b6ec3a32d4c77b5a"
 conversation = [
 
     {"role": "system", "content": "You are a  AI assistant built for the toy manufacturer Mattel. You will help people find "
-                                  "relevant information about Mattel products and other information related to Mattel"}
+                                  "relevant information about Mattel products and other information related to Mattel"
+                                  "Do not respond to questions about topics or domains other than Mattel's area of operation."
+                                  "If asked about other topics, mention that you are an assistant for Mattel, and are only programmed to "
+                                  "answer questions about their domain."
+    
+    }
+    
+    
+    
+    
     # {"role": "user", "content": "what are the coffee types?"},
     # {"role": "assistant", "content": "There are various types of coffee, including hot coffees, iced coffees, "
     #                                  "hot teas, iced teas, and more. Some examples of hot coffees are Caribou Coffee "

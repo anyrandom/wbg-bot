@@ -4,7 +4,7 @@ import os
 import openai
 from PIL import Image
 
-logo = Image.open("images/mattel_logo.jpg")
+logo = Image.open("mattel_logo.jpg")
 
 st.set_page_config(page_title="Mattel Assistant", page_icon=logo, initial_sidebar_state="auto")
 st.sidebar.image(logo)

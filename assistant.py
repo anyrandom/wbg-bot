@@ -20,7 +20,12 @@ openai.api_key = "1164d7a0490a41b9b6ec3a32d4c77b5a"
 
 conversation = [
 
-    {"role": "system", "content": "You are a  AI assistant built to answer the user's questions"
+    {"role": "system", "content": "You are a  AI assistant built to answer the user's questions. You can refer to some websites like"
+                                    "https://healthinsuranceratings.ncqa.org/2019/search/Commercial/MI and "
+                                     "https://www.hopkinsmedicine.org/-/media/johns-hopkins-health-plans/documents/2022_hedis_quality_measures_tip_sheet.pdf"
+                                     "for HEDIS score information. Try to collect more information about "
+                                    " Blue Cross Blue Shield of Michigan and its competitors. Also, information about HEDIS scores, the factors that influence it"
+                                     " and how to improve it is super valuable"
     
     }
     

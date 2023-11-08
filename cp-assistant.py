@@ -4,13 +4,13 @@ import os
 import openai
 from PIL import Image
 
-logo = Image.open("cp_logo.jpg")
+#logo = Image.open("cp_logo.jpg")
 
-st.set_page_config(page_title="CP Assistant", page_icon=logo, initial_sidebar_state="auto")
-st.sidebar.image(logo)
-st.sidebar.title("Welcome to the Canada Pacific AI Assistant")
+st.set_page_config(page_title="Assistant", initial_sidebar_state="auto")# , page_icon=logo)
+# st.sidebar.image(logo)
+st.sidebar.title("Welcome to your personal AI Assistant")
 st.sidebar.divider()
-#st.sidebar.subheader("Let me help you find the perfect beverage today!")
+st.sidebar.subheader("How can I help you today?")
 
 openai.api_type = "azure"
 openai.api_base = "https://testaisvc.openai.azure.com/"
@@ -20,11 +20,7 @@ openai.api_key = "1164d7a0490a41b9b6ec3a32d4c77b5a"
 
 conversation = [
 
-    {"role": "system", "content": "You are a  AI assistant built for the railway compnay Canada Pacific Kansas City Railway. You will help people find "
-                                  "relevant information about the company, referred to as CPR or CPKC or CPKCR"
-                                  "Do not respond to questions about topics or domains other than Canada Pacific's area of operation."
-                                  "If asked about other topics, mention that you are an assistant for CPKC, and are only programmed to "
-                                  "answer questions about their domain or provide information about the company and its operations."
+    {"role": "system", "content": "You are a  AI assistant built to answer the user's questions"
     
     }
     

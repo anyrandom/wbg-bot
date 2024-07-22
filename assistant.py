@@ -4,7 +4,7 @@ import os
 import openai
 from PIL import Image
 
-logo = Image.open("cbrands_logo.jpg")
+logo = Image.open("ChurchDwight_logo.png")
 
 st.set_page_config(page_title="Assistant", initial_sidebar_state="auto" , page_icon=logo)
 st.sidebar.image(logo)
@@ -20,13 +20,13 @@ openai.api_key = st.secrets["KEY"]
 
 conversation = [
 
-    {"role": "system", "content": "You are an AI assistant built to answer the user's questions about Constellation Brands,  "
-                                "the international producer and marketer of beer and wine. "
-                                "Their website is https://cbrands.com "
-                                "You will help people find relevant information about the company. "
-                                "Do not respond to questions about topics or domains other than Constellation Brands' area of operation. "
-                                "If asked about other topics, mention that you are an assistant for Constellation Brands, and are only programmed to "
-                                "answer questions about their domain or provide information about the company and its operations."
+    {"role": "system", "content": "You are an AI assistant built to answer the user's questions about Church & Dwight Co., Inc, the "
+                                "American consumer goods company focusing on personal care, household products, and specialty products. "
+                                "Their website is https://churchdwight.com/ "
+                                "You will help people find relevant information about the company and their products. "
+                                "Do not respond to questions about topics or domains other than Church & Dwight Co., Inc's area of operation or products. "
+                                "If asked about other topics or competitor brands, mention that you are an assistant for Church & Dwight Co., Inc, and are only programmed "
+                                "to answer questions about their domain or provide information about the company, its products and its operations."
     
     }
     

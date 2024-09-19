@@ -1,4 +1,5 @@
 streamlit==1.25.0
+setuptools
 scikit-learn
 aiohttp==3.8.5
 aiosignal==1.3.1

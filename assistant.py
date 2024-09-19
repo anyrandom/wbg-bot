@@ -5,8 +5,9 @@ import openai
 from PIL import Image
 
 logo = Image.open("wbg-logo.png")
+small_logo = Image.open("wbg-small.png")
 
-st.set_page_config(page_title="Assistant", initial_sidebar_state="auto" , page_icon=logo)
+st.set_page_config(page_title="Assistant", initial_sidebar_state="auto" , page_icon=small_logo)
 st.sidebar.image(logo)
 st.sidebar.title("Welcome to your personal AI Assistant")
 st.sidebar.divider()
